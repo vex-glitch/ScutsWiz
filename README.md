@@ -22,10 +22,13 @@ This means:
 - You assign shortcuts **intentionally**, not by habit
 - Every assignment is documented — action, app, physical key, QMK layer
 - Switching keyboards means updating the hardware mapping, not rebuilding from scratch
+- Once a shortcut is consciously assigned, it is always retrievable and modifiable with a single keystroke
 
-If this sounds like over-engineering — it is, and it's worth it.
+**ScutsWiz is for system tinkerers.** You'll know if you are one as you continue reading.
 
-> 📖 Full philosophy, design decisions, and the mental model behind ScutsWiz live in the [Wiki](../../wiki).
+The initial setup takes about an hour. After that the system lives with you forever — no more accidental conflicts, no more wondering *"something is triggering, where do I look? Keyboard Maestro? Alfred? System Settings?"* Open ScutsWiz, choose **What Does This Key Do**, pick the keystroke — and you know exactly where it lives, what it does, and how to change it.
+
+> 📖 Full philosophy, design decisions, and the mental model behind ScutsWiz live in the [Wiki](https://github.com/vex-glitch/ScutsWiz/wiki).
 
 ---
 
@@ -43,7 +46,7 @@ Find free slots. Know what every key does. Search your assigned shortcuts by app
 > 🎬 *GIF: Next Available → find free slot → assign → KeyCue updates*
 
 ### 🔄 Stay in Sync
-One action generates Markdown tables, writes directly to KeyCue (no import dialog), and opens your layout in KLE-NG pre-loaded. Everything stays current automatically.
+Every action that changes your shortcuts automatically regenerates your Markdown tables and updates KeyCue — no manual step required. The Generate Files action exists as a fallback, but in normal use everything stays current on its own.
 
 <!-- GIF: Generate → KeyCue auto-reload -->
 > 🎬 *GIF: Generate Files → KeyCue reloads with updated shortcuts*
@@ -143,10 +146,12 @@ Shorthands are **global** — shared across all keyboard profiles. The KeyCue ex
 <details>
 <summary><strong>Generate & Sync Files</strong></summary>
 
-### Generate Files
-- **MD Table (single group)** — Markdown table for one modifier group
-- **MD Tables (all groups)** — full set at once, designed for Obsidian
-- **KeyCue** — writes directly to KeyCue's `.kcustom` file, reloads KeyCue automatically. Includes shortcuts, shorthands, and a system-wide omit block. Controlled by `keycue_automation` toggle.
+Markdown tables and KeyCue are regenerated automatically after every assign, change, or delete action — you don't need to run Generate manually in normal use.
+
+**Generate Files** is available as a fallback or to force a refresh:
+- **MD Table (single group)** — regenerate the table for one modifier group
+- **MD Tables (all groups)** — regenerate all tables at once
+- **KeyCue** — force a full KeyCue refresh. Controlled by `keycue_automation` toggle.
 
 ### Navigate Files
 Open, reveal in Finder, or act on your SSOT, Markdown tables, or layout files — all from Alfred.
