@@ -24,7 +24,7 @@ This means:
 - Switching keyboards means updating the hardware mapping, not rebuilding from scratch
 - Once a shortcut is consciously assigned, it is always retrievable and modifiable with a single keystroke
 
-**ScutsWiz is for system thinker(er)s.** You'll know if you are one as you continue reading.
+**ScutsWiz is for Systems t(h)inker(er)s.** You'll know if you are one as you continue reading.
 
 The initial setup takes about an hour. After that the system lives with you forever — no more accidental conflicts, no more wondering *"something is triggering, where do I look? Keyboard Maestro? Alfred? System Settings?"* Open ScutsWiz, choose **What Does This Key Do**, pick the keystroke — and you know exactly where it lives, what it does, and how to change it.
 
